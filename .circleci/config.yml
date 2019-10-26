@@ -65,4 +65,6 @@ workflows:
   pepito_perez:
     jobs:
       - build
-      - run
+      - run:
+        requires:
+          - build
