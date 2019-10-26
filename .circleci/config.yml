@@ -65,7 +65,14 @@ workflows:
   pepito_perez:
     jobs:
       - build: 
-          
+          filters:
+            branches:
+              only:
+                - master  
       - run:
           requires:
             - build
+          filters:
+            branches:
+              only:
+                - master
